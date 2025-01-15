@@ -64,8 +64,15 @@ int main() {
 
 // Output
 
+/*
+ * Before
+ * The voltage reading of PB1 is: 0.01V
+ * The voltage reading of PB2 is: 5.02V
+ * The state reading of PB3 is: 0V
+ * The state reading of PB4 is: 1V
+ */
+
 /* After
  * ➜ .\Lab1.exe
  * PB1 released.   PB2 released.   PB3 released.   PB4 released.
- *
  */

@@ -24,10 +24,31 @@ int main() {
         lj_cue = GetResult(lj_handle, LJ_ioGET_DIGITAL_BIT, 4, &btnFIO4);
         lj_cue = GetResult(lj_handle, LJ_ioGET_DIGITAL_BIT, 5, &btnFIO5);
 
-        printf("The voltage reading of PB1 is: %.2lfV\n", btnAIN0);
-        printf("The voltage reading of PB2 is: %.2lfV\n", btnAIN1);
-        printf("The state reading of PB3 is: %.0lfV\n", btnFIO4);
-        printf("The state reading of PB4 is: %.0lfV\n\n", btnFIO5);
+        if (btnAIN0 > 4.5) {
+            printf("PB1 pressed.\n");
+        } else if (btnAIN0 < 0.5){
+            printf("PB1 released.\n");
+        }
+
+        if (btnAIN1 > 4.5) {
+            printf("PB2 pressed.\n");
+        } else if (btnAIN1 < 0.5) {
+            printf("PB2 released.\n");
+        }
+
+        if (btnFIO4 == 0) {
+            printf("PB3 pressed.\n");
+        } else if (btnFIO4 == 1) {
+            printf("PB3 released.\n");
+        }
+
+        if (btnFIO5 == 0) {
+            printf("PB4 pressed.\n");
+        } else if (btnFIO5 == 1) {
+            printf("PB4 released.\n");
+        }
+
+        printf("\n\n");
 
         counter++;
         Sleep(100);

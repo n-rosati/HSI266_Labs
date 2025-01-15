@@ -1,4 +1,5 @@
 /* Name: Nicholas Rosati
+ * Program name: HSI266 Lab 1
  * Date: 2025-01-15
  * Purpose: The program runs for 20 seconds and constantly outputs the states of physical buttons.
  *          The program will read button states from the connected LabJack on ports AIN0, AIN1, FIO4, FIO5 then

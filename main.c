@@ -1,3 +1,11 @@
+/* Name: Nicholas Rosati
+ * Date: 2025-01-15
+ * Purpose: The program runs for 20 seconds and constantly outputs the states of physical buttons.
+ *          The program will read button states from the connected LabJack on ports AIN0, AIN1, FIO4, FIO5 then
+ *          output to the terminal if the corresponding button (PB1, PB2, etc.) is pressed or released.
+ *          When the program is finished, it will close the LabJack device and exit the program.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <Windows.h>

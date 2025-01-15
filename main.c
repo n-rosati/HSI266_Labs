@@ -74,10 +74,1009 @@ int main() {
 
 /*
  * Before
- * The voltage reading of PB1 is: 0.01V
- * The voltage reading of PB2 is: 5.02V
- * The state reading of PB3 is: 0V
- * The state reading of PB4 is: 1V
+  Nicholas2025-01-15 14:37:16  C:/Users/Nicholas/Documents/Coding/HSI/Lab1/cmake-build-debug  fbdbe6f   
+➜ .\Lab1.exe
+The voltage reading of PB1 is: 0.04V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.05V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.05V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.04V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.04V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.05V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.07V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.05V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.05V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.04V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.05V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.05V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 5.06V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 5.06V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 5.06V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 5.06V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.00V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.02V
+The voltage reading of PB2 is: 0.01V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.02V
+The voltage reading of PB2 is: 0.01V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 0.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.03V
+The voltage reading of PB2 is: 0.01V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.01V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.05V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 1V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.08V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 1V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.06V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 1V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.05V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 1V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.10V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 1V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.01V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.04V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 0V
+
+The voltage reading of PB1 is: 0.06V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 0V
+
+The voltage reading of PB1 is: 0.09V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 0V
+
+The voltage reading of PB1 is: 0.08V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 0V
+
+The voltage reading of PB1 is: 0.11V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 0V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.01V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.01V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.01V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.01V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.01V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.01V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.01V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.06V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 1V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.07V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 1V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.07V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 1V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.07V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 1V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.02V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.00V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.03V
+The voltage reading of PB2 is: 0.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.03V
+The voltage reading of PB2 is: 0.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.04V
+The voltage reading of PB2 is: 0.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.03V
+The voltage reading of PB2 is: 0.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 5.05V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 5.06V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 5.06V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 5.06V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 5.06V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.02V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.02V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.02V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.02V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.02V
+The voltage reading of PB2 is: 5.02V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+The voltage reading of PB1 is: 0.01V
+The voltage reading of PB2 is: 5.03V
+The state reading of PB3 is: 0V
+The state reading of PB4 is: 1V
+
+Press any key to continue . . .
  */
 
 /* After

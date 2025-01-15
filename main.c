@@ -24,31 +24,32 @@ int main() {
         lj_cue = GetResult(lj_handle, LJ_ioGET_DIGITAL_BIT, 4, &btnFIO4);
         lj_cue = GetResult(lj_handle, LJ_ioGET_DIGITAL_BIT, 5, &btnFIO5);
 
+        // Clears the current line in the terminal
+        printf("\33[2K\r");
+
         if (btnAIN0 > 4.5) {
-            printf("PB1 pressed.\n");
+            printf("PB1 pressed.\t");
         } else if (btnAIN0 < 0.5){
-            printf("PB1 released.\n");
+            printf("PB1 released.\t");
         }
 
         if (btnAIN1 > 4.5) {
-            printf("PB2 pressed.\n");
+            printf("PB2 released.\t");
         } else if (btnAIN1 < 0.5) {
-            printf("PB2 released.\n");
+            printf("PB2 pressed.\t");
         }
 
         if (btnFIO4 == 0) {
-            printf("PB3 pressed.\n");
+            printf("PB3 released.\t");
         } else if (btnFIO4 == 1) {
-            printf("PB3 released.\n");
+            printf("PB3 pressed.\t");
         }
 
         if (btnFIO5 == 0) {
-            printf("PB4 pressed.\n");
+            printf("PB4 pressed.\t");
         } else if (btnFIO5 == 1) {
-            printf("PB4 released.\n");
+            printf("PB4 released.\t");
         }
-
-        printf("\n\n");
 
         counter++;
         Sleep(100);
@@ -58,3 +59,13 @@ int main() {
     Close();
     return 0;
 }
+
+
+
+// Output
+
+/* After
+ * ➜ .\Lab1.exe
+ * PB1 released.   PB2 released.   PB3 released.   PB4 released.
+ *
+ */

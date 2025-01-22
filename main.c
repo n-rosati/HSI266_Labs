@@ -1,3 +1,11 @@
+// Program name: HSI266 Lab 2
+// Name: Nicholas Rosati
+// Date: 2024-01-22
+// Program description: Program will run for about 15 seconds. It uses FIO6, FIO7, DAC0, and DAC1 to turn on four LEDs.
+//                      It will turn on the LEDs, one at a time, in sequence of amber, blue, green, red using the previously mentioned IO channels.
+//                      It will also cycle which LED is on every 1 second, while outputting to the console the status
+//                      of the LEDs every 250ms.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <Windows.h>

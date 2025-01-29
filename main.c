@@ -51,10 +51,10 @@ int main()
 
         if ((int)(currentOnPercent * 100) != (int)(nextOnPercent * 100)) {
             printf("LED output power is now: %.0f\n", nextOnPercent * 100);
-
-            lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_VALUE, 0, outputValue, 0, 0);
-            lj_cue = Go();
         }
+
+        lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_VALUE, 0, outputValue, 0, 0);
+        lj_cue = Go();
 
         currentOnPercent = nextOnPercent;
         counter++;

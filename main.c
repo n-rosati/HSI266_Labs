@@ -34,3 +34,8 @@ int main()
     Close();
     return 0;
 }
+
+
+/* OUTPUT
+The serial number of the LabJack is: 320093113
+*/

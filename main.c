@@ -11,8 +11,6 @@
 #include <Windows.h>
 #include "C:/Program Files (x86)/LabJack/Drivers/LabJackUD.h"
 
-#define COUNTER_MAX 300
-
 int main()
 {
     LJ_ERROR lj_cue;
@@ -33,17 +31,17 @@ int main()
     printf("The firmware version of the LabJack is: %.2lf\n", firmverLJ);
 
     lj_cue = AddRequest(lj_handle, LJ_ioPUT_CONFIG, LJ_chTIMER_COUNTER_PIN_OFFSET, 7, 0, 0);
-    lj_cue = AddRequest(lj_handle, LJ_ioPUT_CONFIG, LJ_chNUMBER_TIMERS_ENABLED, 1, 0, 0);
     lj_cue = AddRequest(lj_handle, LJ_ioPUT_CONFIG, LJ_chTIMER_CLOCK_BASE, LJ_tc1MHZ_DIV, 0, 0);
-    lj_cue = AddRequest(lj_handle, LJ_ioPUT_CONFIG, LJ_chTIMER_CLOCK_DIVISOR, 4, 0, 0);
-    lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_MODE, 0, LJ_tmPWM8, 0, 0);
-    lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_VALUE, 0, 65535, 0, 0);
+    lj_cue = AddRequest(lj_handle, LJ_ioPUT_CONFIG, LJ_chTIMER_CLOCK_DIVISOR, 5, 0, 0);
+    lj_cue = AddRequest(lj_handle, LJ_ioPUT_CONFIG, LJ_chNUMBER_TIMERS_ENABLED, 1, 0, 0);
+    lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_MODE, 0, LJ_tmPWM16, 0, 0);
     lj_cue = Go();
 
 
     float nextOnPercent = 0.0;
     float currentOnPercent = 0.0;
     int outputValue = 0.0;
+    const int COUNTER_MAX = 300;
     while (counter <= COUNTER_MAX)
     {
         nextOnPercent = (float) counter / COUNTER_MAX;
@@ -61,7 +59,7 @@ int main()
         Sleep(50);
     }
 
-    system("pause");
+    // system("pause");
     Close();
     return 0;
 }

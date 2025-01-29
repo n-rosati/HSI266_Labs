@@ -1,3 +1,11 @@
+// Program name: HSI266 Lab 3
+// Name: Nicholas Rosati
+// Date: 2025-01-29
+// Program description: Program will run for 20 seconds. It uses FIO7 as output to control a FET.
+//                      It first output the connected LabJack's serial number, hardware, and firmware versions.
+//                      Next, it will set up timer 0 with a (almost) 1kHz frequency and 0% duty cycle.
+//                      It will then gradually brighten the LED by smoothly raising the duty cycle to 100%
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <Windows.h>

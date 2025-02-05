@@ -35,6 +35,8 @@ int main() {
 
     while (counter < 300) {
 
+
+        Sleep(100);
         counter++;
     }
 }

@@ -13,14 +13,14 @@ set pu_btnAIN1 to analog input
 set pd_btnAIN2 to analog input
 set al_ledFIO4 to digial output
 set dac1leds to analog output
-set up timer with: TCB=48M DIV=47 TM=8bit (see `counter math.txt`)
+set up timer with: TCB=48M DIV=47 TM=8bit
 
 while counter < 300
     read AIN0 to pu_btnAIN0
-    if pu_btnAIN0 is high // button pressed
+    if pu_btnAIN0 is low // button pressed
         set al_ledFIO4 low
         print "al_ledFIO4 is pressed, red led is on"
-    else if pu_btnAIN0 is low // button released
+    else if pu_btnAIN0 is high // button released
         set al_ledFIO4 high
 
     if pu_btnAIN1 is low // button pressed

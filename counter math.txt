@@ -1,0 +1,5 @@
+10 updates/sec -> 100ms
+30 sec -> 30000ms
+
+counter = 30000ms / 100ms/update
+counter = 300

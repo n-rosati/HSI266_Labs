@@ -1,0 +1,38 @@
+double serialNumber
+double pu_btnAIN0
+double pu_btnAIN1
+double pd_btnAIN2
+double al_ledFIO4 // red led
+double dac1leds // amber and blue leds
+
+read device serial number into serialNumber
+print serialNumber to console
+
+set pu_btnAIN0 to analog input
+set pu_btnAIN1 to analog input
+set pd_btnAIN2 to analog input
+set al_ledFIO4 to digial output
+set dac1leds to analog output
+set up timer with: TCB=48M DIV=47 TM=8bit (see `counter math.txt`)
+
+while counter < 300
+    read AIN0 to pu_btnAIN0
+    if pu_btnAIN0 is high // button pressed
+        set al_ledFIO4 low
+        print "al_ledFIO4 is pressed, red led is on"
+    else if pu_btnAIN0 is low // button released
+        set al_ledFIO4 high
+
+    if pu_btnAIN1 is low // button pressed
+        set dac1leds low
+        print "amber led is on, blue led is off"
+    else if pu_btnAIN1 is high // button released
+        set dac1leds high
+
+    if pd_btnAIN2 is high // button pressed
+        set timer value to 32768
+        print "buzzer is on"
+    else if pd_btnAIN2 is low // button released
+        set timer value to 65536
+
+    counter++

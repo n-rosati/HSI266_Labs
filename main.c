@@ -48,7 +48,8 @@ int main() {
         lj_cue = GetResult(lj_handle, LJ_ioGET_AIN, 2, &btn_pdAIN2);
 
         btn1State = convertAINtoDigital(btn_puAIN1);
-        if (btn1State ^ btn1OldState) {
+        // If the button is being pressed (not released) AND it's state is different from the previous cycle
+        if (btn1State == 1 && (btn1State ^ btn1OldState)) {
             if (ledState == 0) {
                 lj_cue = AddRequest(lj_handle, LJ_ioPUT_DAC, 0, 5, 0, 0);
                 lj_cue = AddRequest(lj_handle, LJ_ioPUT_DAC, 1, 0, 0, 0);
@@ -62,7 +63,7 @@ int main() {
         }
         btn1OldState = btn1State;
 
-
+        // Buzzer logic controlled by a pull down input
         if (convertAINtoDigital(btn_pdAIN2)) {
             lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_VALUE, 0, 32768, 0, 0);
             Go();

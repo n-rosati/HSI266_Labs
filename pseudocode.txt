@@ -16,7 +16,15 @@ set timer0 value 0
 while (counter < 200)
     read button state into btn // btn1 must be a bool/int, needs to be converted from double
     if ((btn1 XOR btn1OldState) and (btn1 == 1)) //only want one edge to do something, not both
-        toggle LED
+        if (ledState = 0)
+            set DAC0 to 5
+            set DAC1 to 0
+            set ledState = 1
+        else
+            set DAC0 to 5
+            set DAC1 to 0
+            set ledState = 0
+
     btnOldState = btn
 
     if (btn2 is active)

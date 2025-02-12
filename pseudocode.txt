@@ -24,7 +24,6 @@ while (counter < 200)
             set DAC0 to 5
             set DAC1 to 0
             set ledState = 0
-
     btnOldState = btn
 
     if (btn2 is active)
@@ -32,9 +31,6 @@ while (counter < 200)
         print "the buzzer is on"
     else
         set timer0 value 65536
-
-    read LED port status into ledState
-    print whether the led is green or red
 
     sleep(100)
     counter++

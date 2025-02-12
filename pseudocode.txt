@@ -11,7 +11,7 @@ set timer0 pin offset
 set timer0 base
 set timer0 div
 set timer0 mode
-set timer0 value 65536
+set timer0 value 0
 
 while (counter < 200)
     read button state into btn // btn1 must be a bool/int, needs to be converted from double

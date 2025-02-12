@@ -11,7 +11,7 @@
 #include <Windows.h>
 #include "C:/Program Files (x86)/LabJack/Drivers/LabJackUD.h"
 
-int convertAINtoDigital(double val);
+boolean convertAINtoDigital(double val);
 
 int main() {
     LJ_HANDLE lj_handle = 0;
@@ -20,7 +20,7 @@ int main() {
     double btn_puAIN1 = 0;
     double btn_pdAIN2 = 0;
     double ledState = 0;
-    int btn1State = 0;
+    boolean btn1State = 0;
     int btn1OldState = 0;
     int ticks = 0;
 
@@ -82,7 +82,7 @@ int main() {
     return 0;
 }
 
-int convertAINtoDigital(const double val) {
+boolean convertAINtoDigital(const double val) {
     return val > 4.5 ? 1 : 0;
 }
 

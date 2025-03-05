@@ -1,7 +1,12 @@
 /* Name: Nicholas Rosati
  * Program name: HSI266 Lab 6
  * Date 2025-03-06
- * Purpose:
+ * Purpose: Program will present a menu to control the RGB LED in different ways.
+ *          Menu item 1 will control the RGB LED using potentiometer input (pin AIN0) and
+ *          output accordingly to timer 0, timer 1, and DAC0 to control the LED.
+ *          The program will continuously read the potentiometer, set the LED colour, and output to the terminal
+ *          every 100ms.
+ *          Menu item 2 will allow the user to pick colours from a list and will set the LED to that colour.
  */
 
 #include <stdio.h>

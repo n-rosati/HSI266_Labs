@@ -12,7 +12,7 @@ int main() {
     double ljSN = 0;
     char userInputMenu1 = '3', userInputMenu2 = '7';
     double btnFIO4, potAIN0;
-    double potPercent, redPercent, greenPercent, bluePercent;
+    double potPercent, redPercent, redValue, greenPercent, greenValue, bluePercent, blueValue;
 
     lj_cue = OpenLabJack(LJ_dtU3, LJ_ctUSB, "1", 1, &lj_handle);
     lj_cue = ePut(lj_handle, LJ_ioPIN_CONFIGURATION_RESET, 0, 0, 0);
@@ -50,11 +50,18 @@ int main() {
                     greenPercent = clampDouble(0.0, 1.0, (potPercent - 0.33) / 0.33);
                     bluePercent = clampDouble(0.0, 1.0, (potPercent - 0.66) / 0.33);
 
+                    redValue = clampInt(0, 65535, redPercent * 65535);
+                    greenValue = clampInt(0, 65535, greenPercent * 65535);
+                    blueValue = clampInt(0, 3.3, bluePercent * 3.3);
+
                     // Set colours
-                    lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_VALUE, 0, clampInt(0, 65535, redPercent * 65535), 0, 0);
-                    lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_VALUE, 1, clampInt(0, 65535, greenPercent * 65535), 0, 0);
-                    lj_cue = AddRequest(lj_handle, LJ_ioPUT_DAC, 0, clampInt(0, 3.3, bluePercent * 3.3), 0, 0);
+                    lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_VALUE, 0, redValue, 0, 0);
+                    lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_VALUE, 1, greenValue, 0, 0);
+                    lj_cue = AddRequest(lj_handle, LJ_ioPUT_DAC, 0, blueValue, 0, 0);
                     lj_cue = Go();
+
+                    // Output state
+                    printf("Red LED DC value: %d\tGreen LED DC value: %d\tBlue LED DAC value: %d\n", redValue, greenValue, blueValue);
 
                     // Get button state
                     lj_cue = AddRequest(lj_handle, LJ_ioGET_DIGITAL_BIT, 4, 0, 0, 0);

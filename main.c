@@ -132,6 +132,13 @@ int main() {
     return 0;
 }
 
+/**
+ * Clamps a given double value to a given bound
+ * @param lower Lower bound
+ * @param upper Upper bound
+ * @param val Value to clamp
+ * @return Clamped value
+ */
 double clampDouble(double lower, double upper, double val) {
     if (val > upper) {
         return upper;
@@ -142,6 +149,13 @@ double clampDouble(double lower, double upper, double val) {
     return val;
 }
 
+/**
+ * Clamps a given int value to a given bound
+ * @param lower Lower bound
+ * @param upper Upper bound
+ * @param val Value to clamp
+ * @return Clamped value
+ */
 double clampInt(int lower, int upper, int val) {
     if (val > upper) {
         return upper;

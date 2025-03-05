@@ -3,6 +3,8 @@
 #include <Windows.h>
 #include "C:/Program Files (x86)/LabJack/Drivers/LabJackUD.h"
 
+double clamp(double lower, double upper, double val);
+
 int main() {
     LJ_HANDLE lj_handle = 0;
     LJ_ERROR lj_cue = 0;
@@ -96,4 +98,14 @@ int main() {
     Close();
     system("pause");
     return 0;
+}
+
+double clamp(double lower, double upper, double val) {
+    if (val > upper) {
+        return upper;
+    }
+    if (val < lower) {
+        return lower;
+    }
+    return val;
 }

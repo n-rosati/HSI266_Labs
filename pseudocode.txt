@@ -1,4 +1,4 @@
-char userInput, userInputMenu1, userInputMenu2
+char userInputMenu1, userInputMenu2
 double btnFIO4
 double potAIN0
 
@@ -14,7 +14,7 @@ do
         ```
     read console into userInput
 
-    if (userInput == 1)
+    if (userInputMenu1 == 1)
         do
             read AIN0 into potAIN0
 

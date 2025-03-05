@@ -1,3 +1,9 @@
+/* Name: Nicholas Rosati
+ * Program name: HSI266 Lab 6
+ * Date 2025-03-06
+ * Purpose:
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <Windows.h>

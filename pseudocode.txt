@@ -1,0 +1,86 @@
+char userInput, userInputMenu1, userInputMenu2
+double btnFIO4
+double potAIN0
+
+set FIO4 as digital input
+set up PWM on FIO5 and FIO6 (FIO5 -> timer 0, FIO6 -> timer 1)
+
+do
+    print menu options:
+        ```
+            1. Colour adjusts with potentiometer
+            2. Manual colour choice
+            3. Exit
+        ```
+    read console into userInput
+
+    if (userInput == 1)
+        do
+            read AIN0 into potAIN0
+
+            potValue / 65535 = potPercent
+
+            potPercent / 0.33 = redPercent
+            clamp redPercent to [0.0,1.0]
+
+            (potPercent - 0.33) / 0.33 = greenPercent
+            clamp redPercent to [0.0,1.0]
+
+            (potPercent - 0.66) / 0.33 = bluePercent
+            clamp bluePercent to [0.0,1.0]
+
+            set timer0 to (redPercent * 65535)
+            set timer1 to (greenPercent * 65535)
+            set DAC0 to (bluePercent * 3.3)
+
+            read FIO4 into btnFIO4
+            print the duty cycle and DAC output of each channel
+            sleep(100)
+        while (btnFIO4 == 0)
+    else if (userInput == 2)
+        do
+            print menu options:
+                ```
+                    1. Red
+                    2. Green
+                    3. Blue
+                    4. Violet
+                    5. Yellow
+                    6. White
+                    7. Back to main menu
+                ```
+
+            read console into userInputMenu2
+
+            switch (userInputMenu2)
+                case 1
+                    set timer0 PWM value to 0
+                    set timer1 PWM value to 65535
+                    set DAC0 value to 0
+                case 2
+                    set timer0 PWM value to 65535
+                    set timer1 PWM value to 0
+                    set DAC0 value to 0
+                case 3
+                    set timer0 PWM value to 65535
+                    set timer1 PWM value to 65535
+                    set DAC0 value to 3.3
+                case 4
+                    set timer0 PWM value to 0
+                    set timer1 PWM value to 65535
+                    set DAC0 value to 3.3
+                case 5
+                    set timer0 PWM value to 0
+                    set timer1 PWM value to 65535
+                    set DAC0 value to 0
+                case 6
+                    set timer0 PWM value to 0
+                    set timer1 PWM value to 0
+                    set DAC0 value to 3.3
+        while (userInputMenu2 != 7)
+while (userInput != 3)
+
+set timer0 PWM value to 65535
+set timer1 PWM value to 65535
+set DAC0 value to 0
+close

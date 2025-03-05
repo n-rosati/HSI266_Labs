@@ -3,7 +3,8 @@
 #include <Windows.h>
 #include "C:/Program Files (x86)/LabJack/Drivers/LabJackUD.h"
 
-double clamp(double lower, double upper, double val);
+double clampDouble(double lower, double upper, double val);
+double clampInt(int lower, int upper, int val);
 
 int main() {
     LJ_HANDLE lj_handle = 0;
@@ -11,6 +12,7 @@ int main() {
     double ljSN = 0;
     char userInputMenu1 = '3', userInputMenu2 = '7';
     double btnFIO4, potAIN0;
+    double potPercent, redPercent, greenPercent, bluePercent;
 
     lj_cue = OpenLabJack(LJ_dtU3, LJ_ctUSB, "1", 1, &lj_handle);
     lj_cue = ePut(lj_handle, LJ_ioPIN_CONFIGURATION_RESET, 0, 0, 0);
@@ -37,7 +39,29 @@ int main() {
 
         switch (userInputMenu1) {
             case '1':
+                do {
+                    // Get pot value
+                    lj_cue = AddRequest(lj_handle, LJ_ioGET_AIN, 0, 0, 0, 0);
+                    lj_cue = Go();
+                    lj_cue = GetResult(lj_handle, LJ_ioGET_AIN, 0, &potAIN0);
 
+                    potPercent = potAIN0 / 65535;
+                    redPercent = clampDouble(0.0, 1.0, potPercent / 0.33);
+                    greenPercent = clampDouble(0.0, 1.0, (potPercent - 0.33) / 0.33);
+                    bluePercent = clampDouble(0.0, 1.0, (potPercent - 0.66) / 0.33);
+
+                    // Set colours
+                    lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_VALUE, 0, clampInt(0, 65535, redPercent * 65535), 0, 0);
+                    lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_VALUE, 1, clampInt(0, 65535, greenPercent * 65535), 0, 0);
+                    lj_cue = AddRequest(lj_handle, LJ_ioPUT_DAC, 0, clampInt(0, 3.3, bluePercent * 3.3), 0, 0);
+                    lj_cue = Go();
+
+                    // Get button state
+                    lj_cue = AddRequest(lj_handle, LJ_ioGET_DIGITAL_BIT, 4, 0, 0, 0);
+                    lj_cue = Go();
+                    lj_cue = GetResult(lj_handle, LJ_ioGET_DIGITAL_BIT, 0, &btnFIO4);
+                    Sleep(100);
+                } while (btnFIO4 == 0);
                 break;
             case '2':
                 do {
@@ -100,7 +124,17 @@ int main() {
     return 0;
 }
 
-double clamp(double lower, double upper, double val) {
+double clampDouble(double lower, double upper, double val) {
+    if (val > upper) {
+        return upper;
+    }
+    if (val < lower) {
+        return lower;
+    }
+    return val;
+}
+
+double clampInt(int lower, int upper, int val) {
     if (val > upper) {
         return upper;
     }

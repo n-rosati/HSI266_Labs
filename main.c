@@ -42,7 +42,7 @@ int main() {
                "2. Manual colour choice.\n"
                "3. Exit\n"
                "Enter a number:\n");
-        scanf_s("%d\n", &userInputMenu1);
+        scanf_s("%c", &userInputMenu1, 1);
 
         switch (userInputMenu1) {
             case '1':
@@ -80,7 +80,7 @@ int main() {
             case '2':
                 do {
                     printf("1. Red\n2. Green.\n3. Blue\n4. Violet\n5. Yellow\n6.White\n7. Back to main menu\nEnter a number:");
-                    scanf_s("%d\n", &userInputMenu2);
+                    scanf_s("%c", &userInputMenu2, 1);
                     switch (userInputMenu2) {
                         case '1': // Red
                             lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_VALUE, 0, 0, 0, 0);

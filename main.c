@@ -30,9 +30,9 @@ int main() {
     // Set up timers
     lj_cue = AddRequest(lj_handle, LJ_ioPUT_CONFIG, LJ_chNUMBER_TIMERS_ENABLED, 2, 0, 0);
     lj_cue = AddRequest(lj_handle, LJ_ioPUT_CONFIG, LJ_chTIMER_COUNTER_PIN_OFFSET, 5, 0, 0);
-    lj_cue = AddRequest(lj_handle, LJ_ioPUT_CONFIG, LJ_chTIMER_CLOCK_BASE, LJ_tc12MHZ_DIV, 0, 0);
-    lj_cue = AddRequest(lj_handle, LJ_ioPUT_CONFIG, LJ_chTIMER_CLOCK_DIVISOR, 3, 0, 0);
-    lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_MODE, 0, LJ_tmPWM16, 0, 0);
+    lj_cue = AddRequest(lj_handle, LJ_ioPUT_CONFIG, LJ_chTIMER_CLOCK_BASE, LJ_tc48MHZ, 0, 0);
+    lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_MODE, 0, LJ_tmPWM8, 0, 0);
+    lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_MODE, 1, LJ_tmPWM8, 0, 0);
     lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_VALUE, 0, 65535, 0, 0);
     lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_VALUE, 1, 65535, 0, 0);
     lj_cue = Go();
@@ -52,14 +52,14 @@ int main() {
                     lj_cue = Go();
                     lj_cue = GetResult(lj_handle, LJ_ioGET_AIN, 0, &potAIN0);
 
-                    potPercent = potAIN0 / 65535;
+                    potPercent = potAIN0 / 4.5;
                     redPercent = clampDouble(0.0, 1.0, potPercent / 0.33);
                     greenPercent = clampDouble(0.0, 1.0, (potPercent - 0.33) / 0.33);
                     bluePercent = clampDouble(0.0, 1.0, (potPercent - 0.66) / 0.33);
 
-                    redValue = clampInt(0, 65535, redPercent * 65535);
-                    greenValue = clampInt(0, 65535, greenPercent * 65535);
-                    blueValue = clampInt(0, 3.3, bluePercent * 3.3);
+                    redValue = clampInt(0, 65535, (1.0 - redPercent) * 65535);
+                    greenValue = clampInt(0, 65535, (1.0 - greenPercent) * 65535);
+                    blueValue = clampInt(0, 5, (1.0 - bluePercent) * 5);
 
                     // Set colours
                     lj_cue = AddRequest(lj_handle, LJ_ioPUT_TIMER_VALUE, 0, redValue, 0, 0);
@@ -73,13 +73,13 @@ int main() {
                     // Get button state
                     lj_cue = AddRequest(lj_handle, LJ_ioGET_DIGITAL_BIT, 4, 0, 0, 0);
                     lj_cue = Go();
-                    lj_cue = GetResult(lj_handle, LJ_ioGET_DIGITAL_BIT, 0, &btnFIO4);
+                    lj_cue = GetResult(lj_handle, LJ_ioGET_DIGITAL_BIT, 4, &btnFIO4);
                     Sleep(100);
-                } while (btnFIO4 == 0);
+                } while (btnFIO4 < 0.5);
                 break;
             case '2':
                 do {
-                    printf("1. Red\n2. Green.\n3. Blue\n4. Violet\n5. Yellow\n6.White\n7. Back to main menu\nEnter a number:");
+                    printf("1. Red\n2. Green\n3. Blue\n4. Violet\n5. Yellow\n6. White\n7. Back to main menu\nEnter a number:\n");
                     scanf_s("%c", &userInputMenu2, 1);
                     switch (userInputMenu2) {
                         case '1': // Red

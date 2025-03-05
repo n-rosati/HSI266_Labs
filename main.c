@@ -12,7 +12,8 @@ int main() {
     double ljSN = 0;
     char userInputMenu1 = '3', userInputMenu2 = '7';
     double btnFIO4, potAIN0;
-    double potPercent, redPercent, redValue, greenPercent, greenValue, bluePercent, blueValue;
+    double potPercent, redPercent, greenPercent, bluePercent;
+    int redValue, greenValue, blueValue;
 
     lj_cue = OpenLabJack(LJ_dtU3, LJ_ctUSB, "1", 1, &lj_handle);
     lj_cue = ePut(lj_handle, LJ_ioPIN_CONFIGURATION_RESET, 0, 0, 0);

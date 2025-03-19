@@ -1,3 +1,13 @@
+/* Name: Nicholas Rosati
+ * Date: 2025-03-19
+ * Purpose: The program continuously monitors the inputs FIO4, FIO5, and AIN0. FIO4 is a reed sensor, FIO5 is a button, and AIN0 is a pressure sensor.
+ *          When the reed sensor is low and pressure sensor is high, the buzzer on FIO6 will sound.
+ *          The buzzer will continue to sound until the push button is pressed.
+ *
+ *          The program will also log the date and time to a file called `log.txt` every 10 seconds. When the alarm
+ *          is triggered, an additional line is written to the file saying the alarm was triggered.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <Windows.h>
@@ -84,3 +94,7 @@ const char* writeTime(void) {
     time(&curTime);
     return ctime(&curTime);
 }
+
+/* CONSOLE OUTPUT
+Serial number: 320093113
+*/

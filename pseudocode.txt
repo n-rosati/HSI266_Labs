@@ -1,18 +1,22 @@
-double ljsn, btnAIN0pd, temperatureSens
+double ljsn, btnAIN0pd, temperatureSens, temperatureRangePercent, labjackPWMPercent, outputValue
 int counter = 0
 
 read labjack serial number into ljsn and print it to console
 
+set up the pwm signal with 48MHz TCB, 8bit TM
+
 while (btnAIN0 < 0.5)
-    read temperature sensor value into temperatureSens, multiplied by 100
+    read temperature sensor value into temperatureSens,
+    temperature = temperatureSens * 100
     read AIN0 to btnAIN0pd
-    if (temperatureSens > 18)
-        find what % temperatureSens is of the range 0-9 (temperatureSens - 18)
-        temporary output value = (1 - temperatureSens range %) * 65535
-        clamp the output value
-        set the pwm output to the value
-    else
-        set the pwm value to 65535
+
+    if (counter % 10)
+        temperatureRangePercent = (temperature - MIN_TEMP) / (MAX_TEMP - MIN_TEMP);
+        labjackPWMPercent = 1.0 - temperatureRangePercent;
+        outputValue = clamp(lower = 0, upper = 65535, pwmPercent * 65535);
+        set pwm value to outputValue
+
+        print the temperature and fan speed % to terminal
 
     if (counter % 150)
         print the date, time, temperature, and fan status to the file

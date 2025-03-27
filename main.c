@@ -72,6 +72,9 @@ int main() {
 
 
     //TODO: update html to say when program ended
+    AddRequest(ljHandle, LJ_ioPUT_TIMER_VALUE, 0, 65535, 0, 0);
+    Go();
+    Close();
     return 0;
 }
 

@@ -14,11 +14,12 @@
 
 double clampDouble(double lower, double upper, double val);
 const char* writeTime(void);
+void updateHTML(double, double);
 
 int main() {
     LJ_HANDLE ljHandle = 0;
     LJ_ERROR lj_cue = 0;
-    double ljSN, btnAIN1pd, temperatureSens, temperature, temperatureRangePercent, pwmPercent, outputValue;
+    double ljSN, btnAIN1pd, temperatureSens, temperature, fanOnPercent, fanOffPercent, outputValue;
     int counter = 0;
 
     lj_cue = OpenLabJack(LJ_dtU3, LJ_ctUSB, "1", 1, &ljHandle);
@@ -39,7 +40,7 @@ int main() {
     // Timer setup
     AddRequest(ljHandle, LJ_ioPUT_CONFIG, LJ_chNUMBER_TIMERS_ENABLED, 1, 0, 0);
     AddRequest(ljHandle, LJ_ioPUT_CONFIG, LJ_chTIMER_COUNTER_PIN_OFFSET, 4, 0, 0);
-    AddRequest(ljHandle, LJ_ioPUT_CONFIG, LJ_chTIMER_CLOCK_BASE, LJ_tc48MHZ, 0, 0);
+    AddRequest(ljHandle, LJ_ioPUT_CONFIG, LJ_chTIMER_CLOCK_BASE, LJ_tc4MHZ, 0, 0);
     AddRequest(ljHandle, LJ_ioPUT_TIMER_MODE, 0, LJ_tmPWM8, 0, 0);
     AddRequest(ljHandle, LJ_ioPUT_TIMER_VALUE, 0, 65535, 0, 0);
     Go();
@@ -53,22 +54,24 @@ int main() {
         GetResult(ljHandle, LJ_ioGET_AIN, 1, &btnAIN1pd);
 
         if (counter % 10 == 0) {
-            temperatureRangePercent = (temperature - MIN_TEMP) / (MAX_TEMP - MIN_TEMP);
-            pwmPercent = 1.0 - temperatureRangePercent;
-            outputValue = clampDouble(0, 65535, pwmPercent * 65535);
-            AddRequest(ljHandle, LJ_ioPUT_TIMER_VALUE, 0, outputValue, 0, 0);
+            fanOnPercent = (temperature - MIN_TEMP) / (MAX_TEMP - MIN_TEMP);
+            fanOffPercent = 1.0 - fanOnPercent;
+            outputValue = clampDouble(0, 65535, fanOffPercent * 65535);
+            AddRequest(ljHandle, LJ_ioPUT_TIMER_VALUE, 0, (int) outputValue, 0, 0);
             Go();
-            printf("Temperature: %.1f, Fan status: %.1f\n", temperature, pwmPercent);
+            printf("Temperature: %.1f, Fan status: %.1f%%\n", temperature, fanOnPercent * 100);
         }
 
         if (counter % 150 == 0) {
-            //TODO
+            //TODO: put the temperature and date/time into an html file
         }
 
         counter++;
         Sleep (100);
     } while (btnAIN1pd < 0.5);
 
+
+    //TODO: update html to say when program ended
     return 0;
 }
 
@@ -93,4 +96,16 @@ const char* writeTime(void) {
     time_t curTime;
     time(&curTime);
     return ctime(&curTime);
+}
+
+void updateHTML(double temp, double fanSpeed)
+{
+    //Open a file as usual.
+
+    //Check to see if program should end (pass 0s for both arguments if pushbutton pressed in main()). If it should, write to html file the date/time program ended and do not include instruction to refresh page.
+
+    //If button not pressed, write to file the current date/time (use writeTime()) temperature, status of fan (either a range of words or percentage). Include instruction to refresh page every 5 seconds for the user.
+    //Close file.
+
+    //Execute batch file to transfer updated html file to matrix server.
 }

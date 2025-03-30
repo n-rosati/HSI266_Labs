@@ -1,0 +1,1 @@
+"C:\Users\Nicholas\AppData\Local\Programs\WinSCP\WinSCP.com" /script="C:\Users\Nicholas\Documents\Coding\HSI266_Lab9\scpscript.txt"

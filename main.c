@@ -4,12 +4,12 @@
 #include <Windows.h>
 #include "C:/Program Files (x86)/LabJack/Drivers/LabJackUD.h"
 
-#define PIN_RB_SENS 4
-#define PIN_IR_SENS 5
-#define PIN_SERVO   6
+#define PIN_RB_SENS     7
+#define PIN_IR_SENS_AIN 0
+#define PIN_SERVO       6
 
-#define SERVO_0     60000
-#define SERVO_90    60000
+#define SERVO_90    60750
+#define SERVO_0     58000
 
 const char* writeTime();
 void updateHTML(int wasTipped);
@@ -32,6 +32,9 @@ int main() {
         return 0;
     }
 
+    lj_cue = eGet(ljHandle, LJ_ioGET_CONFIG, LJ_chSERIAL_NUMBER, &ljSN, 0);
+    printf("Serial number: %.0lf\n", ljSN);
+
     // set up PWM
     AddRequest(ljHandle, LJ_ioPUT_CONFIG, LJ_chNUMBER_TIMERS_ENABLED, 1, 0, 0);
     AddRequest(ljHandle, LJ_ioPUT_CONFIG, LJ_chTIMER_COUNTER_PIN_OFFSET, PIN_SERVO, 0, 0);
@@ -43,19 +46,20 @@ int main() {
 
     // Get initial sensor states
     AddRequest(ljHandle, LJ_ioGET_DIGITAL_BIT, PIN_RB_SENS, 0, 0, 0);
-    AddRequest(ljHandle, LJ_ioGET_DIGITAL_BIT, PIN_IR_SENS, 0, 0, 0);
+    AddRequest(ljHandle, LJ_ioGET_AIN, PIN_IR_SENS_AIN, 0, 0, 0);
     Go();
     GetResult(ljHandle, LJ_ioGET_DIGITAL_BIT, PIN_RB_SENS, &rbSensor);
-    GetResult(ljHandle, LJ_ioGET_DIGITAL_BIT, PIN_RB_SENS, &irSensor);
+    GetResult(ljHandle, LJ_ioGET_AIN, PIN_IR_SENS_AIN, &irSensor);
 
     do {
         if (servoCounter != 0) {
             servoCounter--;
         } else {
             AddRequest(ljHandle, LJ_ioPUT_TIMER_VALUE, 0, SERVO_0, 0, 0);
+            Go();
         }
 
-        if (irSensor < 0.8 && servoCounter == 0) {
+        if (irSensor < 0.5 && servoCounter == 0) {
             servoCounter = 30;
 
             AddRequest(ljHandle, LJ_ioPUT_TIMER_VALUE, 0, SERVO_90, 0, 0);
@@ -72,12 +76,14 @@ int main() {
         Sleep(100);
 
         AddRequest(ljHandle, LJ_ioGET_DIGITAL_BIT, PIN_RB_SENS, 0, 0, 0);
-        AddRequest(ljHandle, LJ_ioGET_DIGITAL_BIT, PIN_IR_SENS, 0, 0, 0);
+        AddRequest(ljHandle, LJ_ioGET_AIN, PIN_IR_SENS_AIN, 0, 0, 0);
         Go();
         GetResult(ljHandle, LJ_ioGET_DIGITAL_BIT, PIN_RB_SENS, &rbSensor);
-        GetResult(ljHandle, LJ_ioGET_DIGITAL_BIT, PIN_RB_SENS, &irSensor);
+        GetResult(ljHandle, LJ_ioGET_AIN, PIN_IR_SENS_AIN, &irSensor);
     } while (rbSensor == 0);
 
+    updateHTML(rbSensor);
+    Close();
     return 0;
 }
 
@@ -96,7 +102,7 @@ void updateHTML(int wasTipped) {
     //Check to see if program should end (pass 0s for both arguments if pushbutton pressed in main()). If it should, write to html file the date/time program ended and do not include instruction to refresh page.
     if (wasTipped) {
         fprintf(fp, "<h1>My Epic Lab <s>9</s> 10</h1>\n"
-                    "<h2>The garbage bin was tipped over at %s!</h2>\n"
+                    "<h2>The garbage bin was tipped over on %s!</h2>\n"
                     "<h3>Program is currently NOT running</h3>", writeTime());
     } else {
         //If button not pressed, write to file the current date/time (use writeTime()) temperature, status of fan (either a range of words or percentage). Include instruction to refresh page every 5 seconds for the user.

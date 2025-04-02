@@ -1,3 +1,13 @@
+/* Name: Nicholas Rosati
+* Program name: HSI266 Lab 10
+ * Date 2025-04-02
+ * Purpose: The program will continuously monitor a rolling ball sensor and IR sensor on channels FIO7 and AIN0 respectively.
+ *          When he IR sensor is triggered, it will actuate a servo motor on FIO6 to the 90 degree position, and hold it
+ *          there for 3 seconds. It will also update the HTML to say when the last time the IR sensor was triggered.
+ *          After three seconds, it will return to the 0 degree position.
+ *          If the rolling ball sensor is triggered, the program will end and update the HTML to say when the program ended.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

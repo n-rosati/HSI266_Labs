@@ -15,6 +15,9 @@ do
         move the servo to the 90 degree position
         write to the HTML file the current date, time, and that the lid was opened
 
+    if (loopCounter % 10 == 0)
+        print the state of the lid to the console
+
     increment loopCounter and sleep(100)
 
     read the state of the IR sensor into irSensor

@@ -1,0 +1,23 @@
+double irSensor, rbSensor
+int loopCounter, servoCounter
+
+read the labjack serial number into ljsn and print to console
+set up a pwm signal on [INSERT PIN HERE]: 8bit TM, 1MHz/div TCB, 78 div
+
+do
+    if (servoCounter != 0)
+        servoCounter--
+    else
+        move the servo to the 0 degree position
+
+    if (IR sensor is triggered and servoCounter == 0)
+        set servoCounter to 30
+        move the servo to the 90 degree position
+        write to the HTML file the current date, time, and that the lid was opened
+
+    increment loopCounter and sleep(100)
+
+    read the state of the IR sensor into irSensor
+    read the state of the rolling ball sensor into rbSensor
+while (rolling ball sensor is low)
+

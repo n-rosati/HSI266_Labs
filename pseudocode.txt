@@ -20,7 +20,8 @@ do
 
     increment loopCounter and sleep(100)
 
-    read the state of the IR sensor into irSensor
-    read the state of the rolling ball sensor into rbSensor
+    read the state of the IR sensor into irSensor and rolling ball into rbSensor
 while (rolling ball sensor is low)
+
+update HTML with the program end time
 

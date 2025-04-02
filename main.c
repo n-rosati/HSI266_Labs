@@ -127,3 +127,56 @@ void updateHTML(int wasTipped) {
     //Execute batch file to transfer updated html file to matrix server.
     system("C:\\Users\\Nicholas\\Documents\\Coding\\HSI266_Lab10\\winscript.bat");
 }
+
+
+/* PROGRAM OUTPUT
+
+C:\Users\Nicholas\Documents\Coding\HSI266_Lab10\cmake-build-debug\Lab10.exe
+Serial number: 320093113
+The bin lid is currently: closed
+The bin lid is currently: closed
+The bin lid is currently: closed
+The bin lid is currently: closed
+
+C:\Users\Nicholas\Documents\Coding\HSI266_Lab10\cmake-build-debug>"C:\Users\Nicholas\AppData\Local\Programs\WinSCP\WinSC
+P.com" /script="C:\Users\Nicholas\Documents\Coding\HSI266_Lab10\scpscript.txt"
+Searching for host...
+Connecting to host...
+Authenticating...
+Using username "nrosati1".
+Authenticating with pre-entered password.
+Authenticated.
+Starting the session...
+Session started.
+Active session: [1] nrosati1@matrix.senecapolytechnic.ca
+C:\...\index.html         |            0 B |    0.0 KB/s | binary |   0%
+C:\...\index.html         |          134 B |    0.0 KB/s | binary | 100%
+Upload of file 'lab10.html' was successful, but error occurred while setting the permissions and/or timestamp.
+If the problem persists, turn off setting permissions or preserving timestamp. Alternatively you can turn on 'Ignore per
+mission errors' option.
+Permission denied.
+Error code: 3
+Error message from server: Permission denied
+(A)bort, (R)etry, (S)kip, Ski(p) all: Abort
+The bin lid is currently: open
+The bin lid is currently: open
+The bin lid is currently: open
+The bin lid is currently: closed
+The bin lid is currently: closed
+The bin lid is currently: closed
+
+C:\Users\Nicholas\Documents\Coding\HSI266_Lab10\cmake-build-debug>"C:\Users\Nicholas\AppData\Local\Programs\WinSCP\WinSC
+P.com" /script="C:\Users\Nicholas\Documents\Coding\HSI266_Lab10\scpscript.txt"
+Searching for host...
+Connecting to host...
+Authenticating...
+Using username "nrosati1".
+Authenticating with pre-entered password.
+Authenticated.
+Starting the session...
+Session started.
+Active session: [1] nrosati1@matrix.senecapolytechnic.ca
+C:\...\index.html         |          148 B |    0.0 KB/s | binary | 100%
+
+Process finished with exit code 0
+*/

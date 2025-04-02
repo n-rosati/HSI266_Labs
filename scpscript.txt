@@ -1,3 +1,3 @@
 open sftp://"%USERNAME%":"%PASSWORD%"@matrix.senecapolytechnic.ca -hostkey="ssh-ed49503 256 34:d3:ac:d0:2f:d6:a2:5b:de:aa:fa:d2:3c:b2:31:cc"
-put "C:\Users\Nicholas\Documents\Coding\HSI266_Lab10\cmake-build-debug\index.html" /home/nrosati1/public_html/lab10.html
+put -nopreservetime -nopermissions "C:\Users\Nicholas\Documents\Coding\HSI266_Lab10\cmake-build-debug\index.html" /home/nrosati1/public_html/lab10.html
 exit

@@ -2,7 +2,7 @@ double irSensor, rbSensor
 int loopCounter, servoCounter
 
 read the labjack serial number into ljsn and print to console
-set up a pwm signal on [INSERT PIN HERE]: 8bit TM, 1MHz/div TCB, 78 div
+set up a pwm signal on FIO6: 8bit TM, 1MHz/div TCB, 78 div
 
 do
     if (servoCounter != 0)

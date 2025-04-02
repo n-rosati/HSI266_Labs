@@ -15,11 +15,11 @@
 #include "C:/Program Files (x86)/LabJack/Drivers/LabJackUD.h"
 
 #define PIN_RB_SENS     7
-#define PIN_IR_SENS_AIN 0
+#define PIN_IR_SENS     5
 #define PIN_SERVO       6
 
-#define SERVO_90    60750
-#define SERVO_0     58000
+#define SERVO_90    63000
+#define SERVO_0     60250
 
 const char* writeTime();
 void updateHTML(int wasTipped);
@@ -56,10 +56,10 @@ int main() {
 
     // Get initial sensor states
     AddRequest(ljHandle, LJ_ioGET_DIGITAL_BIT, PIN_RB_SENS, 0, 0, 0);
-    AddRequest(ljHandle, LJ_ioGET_AIN, PIN_IR_SENS_AIN, 0, 0, 0);
+    AddRequest(ljHandle, LJ_ioGET_DIGITAL_BIT, PIN_IR_SENS, 0, 0, 0);
     Go();
     GetResult(ljHandle, LJ_ioGET_DIGITAL_BIT, PIN_RB_SENS, &rbSensor);
-    GetResult(ljHandle, LJ_ioGET_AIN, PIN_IR_SENS_AIN, &irSensor);
+    GetResult(ljHandle, LJ_ioGET_DIGITAL_BIT, PIN_IR_SENS, &irSensor);
 
     do {
         if (servoCounter != 0) {
@@ -69,7 +69,7 @@ int main() {
             Go();
         }
 
-        if (irSensor < 0.5 && servoCounter == 0) {
+        if (!irSensor && servoCounter == 0) {
             servoCounter = 30;
 
             AddRequest(ljHandle, LJ_ioPUT_TIMER_VALUE, 0, SERVO_90, 0, 0);
@@ -86,10 +86,10 @@ int main() {
         Sleep(100);
 
         AddRequest(ljHandle, LJ_ioGET_DIGITAL_BIT, PIN_RB_SENS, 0, 0, 0);
-        AddRequest(ljHandle, LJ_ioGET_AIN, PIN_IR_SENS_AIN, 0, 0, 0);
+        AddRequest(ljHandle, LJ_ioGET_DIGITAL_BIT, PIN_IR_SENS, 0, 0, 0);
         Go();
         GetResult(ljHandle, LJ_ioGET_DIGITAL_BIT, PIN_RB_SENS, &rbSensor);
-        GetResult(ljHandle, LJ_ioGET_AIN, PIN_IR_SENS_AIN, &irSensor);
+        GetResult(ljHandle, LJ_ioGET_DIGITAL_BIT, PIN_IR_SENS, &irSensor);
     } while (rbSensor == 0);
 
     updateHTML(rbSensor);

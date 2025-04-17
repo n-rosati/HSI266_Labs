@@ -1,0 +1,31 @@
+double ljSN
+double reedSens, pressSens, btnFIO5
+int counter = 0, alarm = 0, tone = 0
+
+read labjack serial number into ljSN and print it to console
+
+open a file named log.txt
+
+read FIO5 into btnFIO5
+
+while (btnFIO5 is low)
+    read FIO4 into reedSens
+    read AIN0 into pressSens
+
+    if ((reedSens is low) and (pressSens is > 4.5)) and (alarm is 0)
+        write a line to the file stating that the alarm was triggered
+        alarm = 1
+
+    if alarm and (counter % 5)
+        if (tone == 0)
+            set the duty cycle of the buzzer to 50%
+        else
+            set the duty cycle of the buzzer to 25%
+        tone = !tone
+
+    if counter % 10
+        write a line to the file with the date and time
+
+    read FIO5 into btnFIO5
+
+    sleep(100)

@@ -1,0 +1,22 @@
+|-----------|-----------|-----------|
+0           |           |           100%
+           33%         33%
+          21845       43690
+
+|-----------| RED
+|-----------------------| GREEN
+|-----------------------------------| BLUE
+
+65535 / 3 = 21845
+
+
+potValue / 65535 = potPercent
+
+potPercent / 0.33 = redPercent
+    clamp redPercent to [0.0,1.0]
+
+(potPercent - 0.33) / 0.33 = greenPercent
+    clamp redPercent to [0.0,1.0]
+
+(potPercent - 0.66) / 0.33 = bluePercent
+    clamp bluePercent to [0.0,1.0]

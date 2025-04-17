@@ -1,0 +1,5 @@
+Pot -> AIN0
+Button -> FIO4
+Red -> FIO5
+Green -> FIO6
+Blue -> DAC0

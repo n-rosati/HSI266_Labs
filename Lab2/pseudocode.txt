@@ -1,0 +1,51 @@
+amberLED = 0 // off
+blueLED = 1 // off
+greenLED = 0 // off
+redLED = 0 // off
+
+int counter = 0
+int quarterSeconds = 0
+int nextScene = 0
+
+while counter < 60 // 15 seconds / 0.25s per cycle
+    if quarterSeconds == 4
+        switch (nextScene)
+            case 0:
+                amberLED = 1 // on
+                blueLED = 1 // off
+                greenLED = 0 // off
+                redLED = 0 // off
+                nextScene = 1
+            case 1:
+                amberLED = 0 // off
+                blueLED = 0 // on
+                greenLED = 0 // off
+                redLED = 0 // off
+                nextScene = 2
+            case 2:
+                amberLED = 0 // off
+                blueLED = 1 // off
+                greenLED = 1 // on
+                redLED = 0 // off
+                nextScene = 3
+            case 3:
+                amberLED = 0 // off
+                blueLED = 1 // off
+                greenLED = 0 // off
+                redLED = 1 // on
+                nextScene = 0
+        quarterSeconds = 0
+
+    print "The Amber LED is on FIO6 and should be ON. Output value is {amberLED}"
+    print "The BLUE LED is on FIO7 and should be ON. Output value is {blueLED}"
+    print "The Green LED is on DAC0 and should be OFF. Output value is {greenLED}"
+    print "The Red LED is on DAC1 and should be ON. Output value is {redLED}"
+
+    sleep(250)
+    quarterSeconds++
+    counter++
+
+set amberLED 0
+set blueLED 1
+set greenLED 0
+set redLED 0

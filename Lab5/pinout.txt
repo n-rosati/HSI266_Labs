@@ -1,0 +1,7 @@
+AO1 -> DAC0
+AO2 -> DAC1
+
+PWM1 -> FIO5
+
+AIN1 -> AIN1
+AIN2 -> AIN2

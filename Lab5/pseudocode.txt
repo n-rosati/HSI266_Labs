@@ -1,0 +1,36 @@
+var btn1OldState  0;
+var btn1 = 0;
+var ljSN = 0;
+var ledState = 0;
+
+read labjack serial number into ljSN
+print "labjack serial: ljSN"
+
+set enable timer0
+set timer0 pin offset
+set timer0 base
+set timer0 div
+set timer0 mode
+set timer0 value 0
+
+while (counter < 200)
+    read button state into btn // btn1 must be a bool/int, needs to be converted from double
+    if ((btn1 XOR btn1OldState) and (btn1 == 1)) //only want one edge to do something, not both
+        if (ledState = 0)
+            set DAC0 to 5
+            set DAC1 to 0
+            set ledState = 1
+        else
+            set DAC0 to 5
+            set DAC1 to 0
+            set ledState = 0
+    btnOldState = btn
+
+    if (btn2 is active)
+        set timer0 value 32768
+        print "the buzzer is on"
+    else
+        set timer0 value 65536
+
+    sleep(100)
+    counter++
